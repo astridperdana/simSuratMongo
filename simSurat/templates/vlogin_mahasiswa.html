@@ -1,0 +1,74 @@
+<html>
+        <head><title>login sukses</title></head>
+        <body>
+            <h2>Selamat Datang pada halaman Login MHS</h2>
+            <p>Halo {{username}} silahkan pilih form surat yang anda butuhkan : </p>
+            <a href="http://localhost:5000/tambahForm1">Form 1</a>
+            <a href="http://localhost:5000/tambahForm2">Form 2</a>
+            <a href="http://localhost:5000/tambahForm3">Form 3</a>
+            <a href="http://localhost:5000/tambahForm4">Form 4</a><br>
+            <br>
+            <h3>form1</h3>
+            <table border="1">
+                <tr>     
+                    <th width="150">NRP</th>
+                    <th width="150">Status</th>
+                    <th width="150">Time</th>
+                </tr>
+                {% for data in temprowdataform1%}
+                <tr>
+                    <td>{{data['nrp']}}</td>
+                    <td>{{data['flag']}}</td>
+                    <td>{{data['time']}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            <h3>form2</h3>
+            <table border="1">
+                <tr>     
+                    <th width="150">NRP</th>
+                    <th width="150">Status</th>
+                    <th width="150">Time</th>
+                </tr>
+                {% for datas in temprowdataform2%}
+                <tr>
+                    <td>{{datas['nrp']}}</td>
+                    <td>{{datas['flag']}}</td>
+                    <td>{{datas['time']}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            <h3>form3</h3>
+            <table border="1">
+                <tr>     
+                    <th width="150">NRP</th>
+                    <th width="150">Status</th>
+                    <th width="150">Time</th>
+                </tr>
+                {% for model in container%}
+                <tr>
+                    <td>{{model.form1id}}</td>
+                    <td>{{model.nrp}}</td>
+                    <td>1</td>
+                    <td>{{model.flag}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            <h3>form4</h3>
+            <table border="1">
+                <tr>     
+                    <th width="150">NRP</th>
+                    <th width="150">Status</th>
+                    <th width="150">Time</th>
+                </tr>
+                {% for model in container%}
+                <tr>
+                    <td>{{model.form1id}}</td>
+                    <td>{{model.nrp}}</td>
+                    <td>1</td>
+                    <td>{{model.flag}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </body>
+    </html>
